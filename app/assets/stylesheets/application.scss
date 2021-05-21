@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+ul {
+  list-style-type: none;
+
+}
+
+li {
+  display: inline;
+  padding: 5px;
+}

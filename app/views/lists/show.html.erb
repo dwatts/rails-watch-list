@@ -6,7 +6,7 @@
     <div class="cards">
       <% @movies.each do |movie| %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= movie.poster_url.gsub(/\s+/, "")%>)">
-         <%= link_to movie.title, lists_path, class: "movie_link" %>
+         <%= link_to movie.title, list_movie_path(@list, movie), class: "movie_link" %>
         </div>
       <% end %>
     </div>
