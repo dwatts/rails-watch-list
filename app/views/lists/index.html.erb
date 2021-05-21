@@ -1,9 +1,23 @@
-<h1>Welcome!</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bW92aWUlMjBuaWdodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);">
+<div class="container">
+    <h1>Let's watch <strong>MOVIES TOGETHER</strong>!</h1>
+    <p>This is the ultimate location for listing movies</p>
+  </div>
+</div>
 
-<p><%= link_to 'create new list', new_list_path %></p>
-
-<ul>
-  <% @lists.each do |list| %>
-      <li> <%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="container p-5">
+  <div class="row justify-content-center">
+    <h1>Welcome!</h1>
+  </div>
+    
+  <div class="row justify-content-center pt-5 pb-5">
+    <ul>
+      <% @lists.each do |list| %>
+          <li> <%= link_to list.name, list_path(list) %></li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="row justify-content-center">  
+    <%= link_to 'Create New List!', new_list_path, class: "btn btn-gradient" %>
+  </div>  
+</div>
